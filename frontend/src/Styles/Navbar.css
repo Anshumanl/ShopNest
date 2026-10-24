@@ -1,0 +1,151 @@
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 5%;
+  background-color: #111827;
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Brand and logo */
+.navbar-brand {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.navbar-brand a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.navbar-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+/* Navigation links */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #fbbf24;
+}
+
+/* Cart link */
+.navbar-links li a[href="/cart"] {
+  background-color: #1f2937;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.navbar-links li a[href="/cart"]:hover {
+  background-color: #374151;
+  color: #fbbf24;
+}
+
+/* Logout button */
+.logout-button {
+  background-color: #dc2626;
+  color: #ffffff;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #b91c1c;
+}
+
+.logout-button:focus-visible,
+.navbar a:focus-visible {
+  outline: 2px solid #fbbf24;
+  outline-offset: 4px;
+}
+
+/* Tablet and mobile responsive */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 16px;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .navbar-brand {
+    font-size: 21px;
+  }
+
+  .navbar-links {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .navbar-links a {
+    font-size: 14px;
+  }
+
+  .navbar-links li {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    justify-content: center;
+  }
+
+  .navbar-brand {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar-links {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .navbar-links li a[href="/cart"] {
+    padding: 6px 8px;
+  }
+
+  .logout-button {
+    padding: 7px 10px;
+  }
+}
