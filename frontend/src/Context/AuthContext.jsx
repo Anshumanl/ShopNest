@@ -1,9 +1,13 @@
-import react, { createContext, useState } from 'react';
+
+import { createContext, useState } from 'react';
 
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(() => {
+    const savedUser = localStorage.getItem('userInfo');
+    return savedUser ? JSON.parse(savedUser) : null;
+  });
 
   const login = (userData) => {
     setUser(userData);
@@ -21,4 +25,3 @@ export const AuthProvider = ({ children }) => {
     </AuthContext.Provider>
   );
 };
-

@@ -1,4 +1,4 @@
-import {Limk} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import "../Styles/ProductCard.css"
 
 const ProductCard = ({ product }) => {
@@ -8,7 +8,7 @@ const ProductCard = ({ product }) => {
      <div classname="product-info">
         <h3 className="product-name">{product.name}</h3>
         <p className="product-price">${product.price}</p>
-        <link to={`/product/${product._id}`} className="view-details-button">View Details</link>
+        <Link to={`/product/${product._id}`} className="view-details-button">View Details</Link>
      </div>
     </div>
   );
