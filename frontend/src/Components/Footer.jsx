@@ -19,9 +19,9 @@ const Footer = () => {
           </div>
          
          <div style={{display: 'flex', gap: '20px'}}>
-            <link to='/about' style={{color: '#6b7280', fontSize: '0.9rem'}}>About Us</link>
-            <link to='/return' style={{color: '#6b7280', fontSize: '0.9rem'}}>Return Policy</link>
-            <link to='/disclaimer' style={{color: '#6b7280', fontSize: '0.9rem'}}>Disclaimer</link>  
+            <Link to='/aboutus' style={{color: '#6b7280', fontSize: '0.9rem'}}>About Us</Link>
+            <Link to='/return' style={{color: '#6b7280', fontSize: '0.9rem'}}>Return Policy</Link>
+            <Link to='/disclaimer' style={{color: '#6b7280', fontSize: '0.9rem'}}>Disclaimer</Link>  
             </div>
 
             <div style={{ color:'#a1a1aa', fontSize: '0.8rem', marginTop: '20px', width: '100%', textAlign: 'center'}}>

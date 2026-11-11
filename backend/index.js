@@ -56,7 +56,13 @@ const app = express();
 
 // CORS enable kar rahe hain
 // Isse frontend application backend API ko access kar sakti hai
-app.use(cors());
+app.use(cors(
+    {
+        origin: ['http://localhost:5173'],
+        credentials: true
+        
+    }
+));
 
 
 // Incoming JSON data ko read karne ke liye middleware

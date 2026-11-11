@@ -1,0 +1,148 @@
+
+/* Home Page */
+.home-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px 5%;
+    box-sizing: border-box;
+}
+
+/* Hero Banner */
+.hero-banner {
+    min-height: 280px;
+    padding: 45px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    border-radius: 16px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+}
+
+.hero-banner h1 {
+    margin: 0 0 16px;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-banner p {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #f1f5f9;
+}
+
+/* Featured Products Heading */
+.home-container h2 {
+    margin: 0 0 25px;
+    color: #1f2937;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* Products Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+}
+
+/* Loading, Error and Empty States */
+.home-container .loading,
+.home-container .error,
+.home-container .empty-state {
+    padding: 30px 15px;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+
+.home-container .loading {
+    color: #2563eb;
+}
+
+.home-container .error {
+    color: #dc2626;
+    background-color: #fef2f2;
+}
+
+.home-container .empty-state {
+    color: #6b7280;
+    background-color: #f9fafb;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .hero-banner {
+        min-height: 250px;
+    }
+}
+
+/* Small Tablet */
+@media (max-width: 768px) {
+    .home-container {
+        padding: 24px 4%;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .hero-banner {
+        min-height: 220px;
+        padding: 35px 20px;
+        margin-bottom: 30px;
+    }
+
+    .hero-banner p {
+        font-size: 1rem;
+    }
+
+    .home-container h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .home-container {
+        padding: 18px 4%;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .hero-banner {
+        min-height: 190px;
+        padding: 28px 16px;
+        border-radius: 12px;
+    }
+
+    .hero-banner h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-banner p {
+        font-size: 0.9rem;
+    }
+
+    .home-container h2 {
+        font-size: 1.35rem;
+    }
+}

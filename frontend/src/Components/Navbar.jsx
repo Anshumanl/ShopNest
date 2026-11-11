@@ -8,7 +8,7 @@ import { useContext } from 'react';
 const Navbar = () => {
 
   const {user, logout} = useContext(AuthContext);
-  const cartItems = useSelector((state) => state.cart.items);
+  const cartItems = useSelector((state) => state.cart.cartItems);
   const navigate = useNavigate();
   const handleLogout = () => {
     logout();
@@ -19,25 +19,17 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-brand">
         <Link to="/">
-          <img  src="/logo.png" alt="ShopNest Logo" className="navbar-logo" style={{ width: '36px', height: '36px' }} />
+          <img  src="/1.png" alt="ShopNest Logo" className="navbar-logo" style={{ width: '36px', height: '36px' }} />
           ShopNest
         </Link>
       </div>
       <ul className="navbar-links">
-        <li>
-          <Link to="/shop">Shop</Link>
-        </li>
-        <li>
-          <Link to="/cart">Cart ({cartItems.length})</Link>
-        </li>
+        <li> <Link to="/shop">Shop</Link> </li>
+        <li> <Link to="/cart">Cart ({cartItems.length})</Link> </li>
         {user ? (
           <>
-          <li>
-            <Link to="/profile">Hi, {user.name}</Link>
-            {user.role === 'admin' && (
-              <Link to="/admin">Admin Dashboard</Link>
-            )}
-          </li>
+          <li> <Link to="/profile">Hi, {user.name}</Link></li>
+          {user.role === 'admin' && <li><Link to="/admin">Admin Dashboard</Link></li>}
           <li><button onClick={handleLogout} className="logout-button">Logout</button></li>
           </>
           ) : (

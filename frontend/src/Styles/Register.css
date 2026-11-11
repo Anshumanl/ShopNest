@@ -1,0 +1,267 @@
+
+.login {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8fafc;
+    padding: 30px 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Login Title */
+
+.loginTitle {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 25px;
+}
+
+/* Login Form */
+
+.loginForm {
+    width: 100%;
+    max-width: 400px;
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Labels */
+
+.loginForm label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+/* Input Fields */
+
+.loginInput {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 14px;
+    margin-bottom: 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.loginInput:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.loginInput::placeholder {
+    color: #94a3b8;
+}
+
+/* Login Button */
+
+.loginButton {
+    width: 100%;
+    padding: 13px;
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.loginButton:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.loginButton:active {
+    transform: translateY(0);
+}
+
+.loginRegisterPrompt {
+    text-align: center;
+    margin-top: 18px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.loginRegisterPrompt a {
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.loginRegisterPrompt a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+
+@media (max-width: 480px) {
+    .login {
+        min-height: 75vh;
+        padding: 20px 15px;
+    }
+
+    .loginTitle {
+        font-size: 27px;
+    }
+
+    .loginForm {
+        padding: 25px 20px;
+    }
+}
+
+
+
+/* Register Page */
+
+.register {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8fafc;
+    padding: 30px 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Register Title */
+
+.registerTitle {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 25px;
+}
+
+/* Register Form */
+
+.registerForm {
+    width: 100%;
+    max-width: 420px;
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Labels */
+
+.registerForm label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+/* Input Fields */
+
+.registerInput {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 14px;
+    margin-bottom: 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.registerInput:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.registerInput::placeholder {
+    color: #94a3b8;
+}
+
+/* Register Button */
+
+.registerButton {
+    width: 100%;
+    padding: 13px;
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.registerButton:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.registerButton:active {
+    transform: translateY(0);
+}
+
+/* Login Button */
+
+.registerLoginButton {
+    width: 100%;
+    max-width: 420px;
+    margin-top: 15px;
+    padding: 12px;
+    background-color: transparent;
+    color: #2563eb;
+    border: 1px solid #2563eb;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.registerLoginButton:hover {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+/* Error Message */
+
+.register span[style] {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+
+@media (max-width: 480px) {
+    .register {
+        min-height: 75vh;
+        padding: 20px 15px;
+    }
+
+    .registerTitle {
+        font-size: 27px;
+    }
+
+    .registerForm {
+        padding: 25px 20px;
+    }
+
+    .registerLoginButton {
+        max-width: 100%;
+    }
+}

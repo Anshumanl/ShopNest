@@ -158,8 +158,14 @@ const loginUser = async (req, res) => {
     try {
         const existingUser = await user.findOne({ email });
 
+        if (!existingUser) {
+            return res.status(404).json({
+                code: 'USER_NOT_FOUND',
+                message: 'No account is registered with this email'
+            });
+        }
+
         if (
-            existingUser &&
             await bcrypt.compare(password, existingUser.password)
         ) {
             res.json({
